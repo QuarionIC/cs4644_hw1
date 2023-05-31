@@ -1,0 +1,9 @@
+
+During lecture 3, we discussed the softmax function $\mathbf{s}(\mathbf{z})$, which takes a vector input $\mathbf{z}$ and outputs a vector whose $i$th entry $s_i$ is
+
+\begin{equation}
+s_i = \frac{e^{z_{i}}}{\sum_{k} e^{z_{k}}}
+\end{equation}
+
+The input vector $\mathbf{z}$ to $\mathbf{s}(\cdot)$ is sometimes called the ``logits'', which just means the unscaled output of previous layers. Derive the gradient of $\mathbf{s}$ with respect to the logits, \ie derive $\frac{\partial \mathbf{s}}{\partial \mathbf{z}}$. 
+Consider re-using your work from HW0.

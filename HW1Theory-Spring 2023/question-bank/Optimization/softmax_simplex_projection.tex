@@ -1,0 +1,22 @@
+
+Recall that a ($d-1$)-dimensional simplex is defined as: 
+\begin{equation}
+    \Delta_{d - 1} = \{\mathbf{p} \in \mathbb{R}^{d} \mid \mathbf{1}^{T}\mathbf{p} = 1 \text{ and } p_i \ge 0 \,\, \forall i \in \{1,\ldots,d\} \}
+\end{equation}
+
+In this question, you will develop an interpretation of softmax as a projection operator -- that it projects an arbitrary point $\mathbf{x} \in \mathbb{R}^d$ onto the interior of the $d - 1$ simplex. Specifically, let $\mathbf{s}(\mathbf{x})$ denote the softmax function (as defined above). Now prove that, 
+
+
+\begin{align}
+    \mathbf{s}(\mathbf{x}) =  \argmin_{\mathbf{y} \in \mathbb{R}^d} &\quad  -\mathbf{x}^{T}\mathbf{y} - H(\mathbf{y}) \\ 
+     \st & \quad \mathbf{1}^{T}\mathbf{y} = 1, \quad 0 \le y_i \le 1 \quad \forall i
+\end{align}
+
+where $H$ is the entropy function: 
+
+\begin{equation}
+    H(\mathbf{y}) = - \sum_{i}y_{i}\log(y_{i})
+\end{equation}
+
+Now, what does this formal interpretation tell you about the softmax layer in a neural network? 
+Hint: Look at the KKT conditions.

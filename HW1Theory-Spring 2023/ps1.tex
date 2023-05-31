@@ -1,0 +1,130 @@
+\documentclass[11pt,english]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Package imports are stored in /assets/base-packages.tex
+% Packages specific to this pset can be imported here.
+
+\listfiles
+\input{assets/base-packages.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Shortcuts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{assets/mysymbols}
+\input{assets/math_definition.tex}
+\renewcommand{\hide}[1]{}
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title / Author
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\title{CS 4644/7643: Deep Learning\\
+Spring 2023 \\
+Problem Set 1}
+
+% NOTE: Any changes to instructor, TAs, or piazza link should be done in the file below
+\input{assets/instructor-and-TAs}
+\date{Due: Friday, February 3, 11:59pm}
+\maketitle
+
+\paragraph*{Instructions}
+\begin{enumerate}
+\item We will be using Gradescope to collect your assignments.  Please read the following instructions for submitting to Gradescope carefully!
+     \begin{itemize}
+          % \item
+               % This assignment has 10 total problems/sub-problems. Questions 1-7 are theory questions, while 8-10 are programming
+               % questions. 
+          \item
+               For the \textbf{HW1 Writeup} component on Gradescope, you could upload one single PDF containing the answers to all the theory questions and the report for coding problems. \textbf{However, the solution to each problem/subproblem must be on a separate page. When submitting to Gradescope, please make sure to mark the page(s) corresponding to each problem/sub-problem.} Likewise, the pages of the report must also be marked to their corresponding subproblems.
+          \item
+               For the \textbf{HW1 Code} component on Gradescope, 
+               please use the \texttt{collect\_submission.sh} script provided and upload the resulting \textbf{assignment\_1\_submission.zip} on Gradescope. Please make sure you have saved the most recent version of your codes.
+          \item
+               Note: This is a large class and Gradescope's assignment segmentation features are essential.
+               Failure to follow these instructions may result in parts of your assignment not being graded.
+               We will not entertain regrading requests for failure to follow instructions.
+
+               % Please read \url{https://stats200.stanford.edu/gradescope_tips.pdf} for additional information on submitting to Gradescope.
+     \end{itemize}
+
+\item
+     \LaTeX'd solutions are strongly encouraged (solution template
+     available in the zip file in HW1 under the Assignments tab on Canvas), but scanned handwritten copies are acceptable. Hard copies are \textbf{not} accepted.
+
+
+\item We generally encourage you to collaborate with other students.
+
+You may talk to a friend, discuss the questions and potential directions for solving them. However, you need to write your own solutions and code separately, and \emph{not} as a group activity. Please list the students you collaborated with. \\ \\
+
+\end{enumerate}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Collaborators [0.5 points]}
+
+\input{question-bank/Misc/collaborators}
+
+
+\section{Optimization}
+
+\begin{enumerate}[start]
+
+\item
+\textbf{[2 points]}
+\input{question-bank/Optimization/levelsets}
+
+\item
+\textbf{[2 points]}
+\input{question-bank/Optimization/local_min_gradient}
+
+\item
+\textbf{[3 points]}
+\input{question-bank/Optimization/global_min_convex}
+
+\item
+\textbf{[2 points]}
+\input{question-bank/Optimization/softmax_gradient}
+
+\item
+\textbf{[3 points: Extra credit for both 4644 and 7643]}
+\input{question-bank/Optimization/softmax_simplex_projection}
+
+\end{enumerate}
+
+\section{Directed Acyclic Graphs (DAG)}
+\input{question-bank/Misc/DAG_background}
+
+\begin{enumerate}[resume]
+
+\item
+\textbf{[3 points]}
+\input{question-bank/Misc/DAG_topological1}
+
+\item
+\textbf{[3 points]}
+\input{question-bank/Misc/DAG_topological2}
+
+\end{enumerate}
+
+\section{Paper Review}
+
+%%%% Point values defined in the file below %%%%
+\input{question-bank/Paper_Reviews/NeurIPS_2019_weighted_agnostic}
+
+\section{Implement and train a network on MNIST}
+
+\begin{enumerate}[resume]
+
+\item
+\textbf{[20 points]}
+\input{question-bank/Coding/learn_MNIST}
+
+\end{enumerate}
+
+\end{document}
